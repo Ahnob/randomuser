@@ -1,0 +1,83 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.App{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:100vh;
+  overflow:hidden;
+  background-color: silver;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button{
+  margin:20px auto;
+  color:rgb(208, 206, 206);
+  background-color:rgb(25, 27, 26);
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+}
+
+button:active{
+  color: aliceblue;
+}
+
+img{
+  width: 200px;
+  border-radius: 50%;
+  border: none;
+  margin:10px 0;
+  height: 250px;
+}
+
+.use-app{
+  width: auto;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.app-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.routes{
+  text-decoration: none;
+  text-align: center;
+  
+}
+.nav-bar{
+  text-decoration: none;
+  margin: 20px 15px;
+}
+
+.link{
+  text-decoration: none;
+  margin: 60px;
+}
+
+
+
+.each-user{
+  margin: 10px;
+  /* border:1px solid; */
+}
+
+.next:disabled{
+  cursor: not-allowed;
+  background-color: blueviolet;
+}
+
+ 
