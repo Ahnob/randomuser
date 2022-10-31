@@ -1,25 +1,25 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App{
-  display:flex;
-  flex-direction:column;
+.App {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height:100vh;
-  overflow:hidden;
+  height: 100vh;
+  overflow: hidden;
   background-color: silver;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-button{
-  margin:20px auto;
-  color:rgb(208, 206, 206);
-  background-color:rgb(25, 27, 26);
+button {
+  margin: 20px auto;
+  color: rgb(208, 206, 206);
+  background-color: rgb(25, 27, 26);
   cursor: pointer;
   border-radius: 20px;
   padding: 15px 30px;
@@ -27,19 +27,19 @@ button{
   border: none;
 }
 
-button:active{
+button:active {
   color: aliceblue;
 }
 
-img{
+img {
   width: 200px;
   border-radius: 50%;
   border: none;
-  margin:10px 0;
+  margin: 10px 0;
   height: 250px;
 }
 
-.use-app{
+.use-app {
   width: auto;
   height: auto;
   align-items: center;
@@ -47,37 +47,77 @@ img{
   flex-direction: column;
 }
 
-.app-icons{
+.app-icons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.routes{
+.routes {
   text-decoration: none;
   text-align: center;
-  
 }
-.nav-bar{
+.nav-bar {
   text-decoration: none;
   margin: 20px 15px;
 }
 
-.link{
+.link {
   text-decoration: none;
   margin: 60px;
 }
 
-
-
-.each-user{
+.each-user {
   margin: 10px;
   /* border:1px solid; */
 }
 
-.next:disabled{
+.next:disabled {
   cursor: not-allowed;
   background-color: blueviolet;
 }
 
- 
+.spinner_OSmW {
+  transform-origin: center;
+  margin: 5rem 0;
+  animation: spinner_T6mA 0.75s step-end infinite;
+}
+
+@keyframes spinner_T6mA {
+  8.3% {
+    transform: rotate(30deg);
+  }
+  16.6% {
+    transform: rotate(60deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  33.3% {
+    transform: rotate(120deg);
+  }
+  41.6% {
+    transform: rotate(150deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  58.3% {
+    transform: rotate(210deg);
+  }
+  66.6% {
+    transform: rotate(240deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  83.3% {
+    transform: rotate(300deg);
+  }
+  91.6% {
+    transform: rotate(330deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,13 +1,12 @@
-import React from "react";
-import { NavLink, Route, Routes } from "react-router-dom";
-import About from "./components/about";
-import Home from "./components/Home";
-import Users from "./components/Users";
-import PageNotFound from "./components/PageNotFound";
-// import PageNotFound from "./components/PageNotFound";
-import "./App.css";
-import { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from 'react';
+import { NavLink, Route, Routes } from 'react-router-dom';
+
+import About from './components/about';
+import Home from './components/Home';
+import Users from './components/Users';
+import PageNotFound from './components/PageNotFound';
+
+import './App.css';
 
 export class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -48,7 +47,7 @@ export const Female = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(true);
-    fetch("https://randomuser.me/api/?results=10&gender=female")
+    fetch('https://randomuser.me/api/?results=10&gender=female')
       .then((res) => res.json())
       .then((res) => {
         setFemaleUsers(res.results);

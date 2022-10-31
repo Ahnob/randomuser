@@ -1,7 +1,7 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
+
+import Loader from './Loader';
 
 export default function Users() {
   const [users, setUsers] = useState([]);
@@ -9,24 +9,21 @@ export default function Users() {
   const [page, setPage] = useState(1);
   useEffect(() => {
     setLoading(true);
-    fetch("https://randomuser.me/api/?results=100")
+    fetch('https://randomuser.me/api/?results=100')
       .then((res) => res.json())
       .then((res) => {
         setUsers(res.results);
         setLoading(false);
       });
   }, []);
+
   const numberPerPage = 10;
   const totalUsers = users.length;
   const pages = Math.ceil(totalUsers / numberPerPage);
   const skip = page * numberPerPage - numberPerPage;
 
-  if (loading)
-    return (
-      <div>
-        <h1>This may take a while</h1>
-      </div>
-    );
+  if (loading) return <Loader />;
+
   return (
     <div className="users">
       <div>
