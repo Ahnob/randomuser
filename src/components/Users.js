@@ -28,8 +28,7 @@ export default function Users() {
     <div className="users">
       <div>
         {users.slice(skip, skip + numberPerPage).map((user) => {
-          const { name, location, email, login, picture } = user;
-          return <Profile name={"Anob"} age={32}/>;
+          return <Profile user={user} />;
         })}
       </div>
       {

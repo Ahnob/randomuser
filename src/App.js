@@ -3,8 +3,11 @@ import { NavLink, Route, Routes } from 'react-router-dom';
 import About from './components/About';
 import Home from './components/Home';
 import Users from './components/Users';
-import Male from './components/Male'
+import Male from './components/Male';
 import PageNotFound from './components/PageNotFound';
+import Profile from './components/Profile';
+import Loader from './components/Loader';
+
 import './App.css';
 
 export class ErrorBoundary extends React.Component {
@@ -35,9 +38,9 @@ const Layout = () => {
         About
       </NavLink>
       <NavLink to="/users" className="link">
-        User
+        Users
       </NavLink>
-      <NavLink to="/female" className="link">
+      <NavLink to="/users/female" className="link">
         Female
       </NavLink>
       <NavLink to="/male" className="link">
@@ -50,6 +53,7 @@ const Layout = () => {
 export const Female = () => {
   const [femaleUsers, setFemaleUsers] = useState([]);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     setLoading(true);
     fetch('https://randomuser.me/api/?results=10&gender=female')
@@ -59,15 +63,14 @@ export const Female = () => {
         setLoading(false);
       });
   }, []);
-  if (loading)
-    return (
-      <div>
-        <h1>loading...</h1>
-      </div>
-    );
+
+  if (loading) return <Loader />;
+
   return (
     <div>
-      <Female />
+      {femaleUsers.map((femaleUser) => (
+        <Profile user={femaleUser} />
+      ))}
     </div>
   );
 };
@@ -77,9 +80,9 @@ export default function App() {
     <div className="routes">
       <Layout />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/users" element={<Users />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="users" element={<Users />}>
           <Route path="female" element={<Female />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
