@@ -3,7 +3,6 @@ import { NavLink, Route, Routes } from 'react-router-dom';
 import About from './components/About';
 import Home from './components/Home';
 import Users from './components/Users';
-import Male from './components/Male';
 import PageNotFound from './components/PageNotFound';
 import Profile from './components/Profile';
 import Loader from './components/Loader';
@@ -39,12 +38,6 @@ const Layout = () => {
       </NavLink>
       <NavLink to="/users" className="link">
         Users
-      </NavLink>
-      <NavLink to="/users/female" className="link">
-        Female
-      </NavLink>
-      <NavLink to="/male" className="link">
-        Male
       </NavLink>
     </div>
   );

@@ -56,7 +56,9 @@ export default function Users() {
           Next
         </button>
       }
-      <Link to="/users/female">Female</Link>
+      <Link className="link" to="/users/female">
+        Female
+      </Link>
       <Outlet />
     </div>
   );

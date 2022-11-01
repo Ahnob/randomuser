@@ -65,6 +65,8 @@ img {
 .link {
   text-decoration: none;
   margin: 60px;
+  font-size: 20px;
+  color: #000;
 }
 
 .each-user {
@@ -120,4 +122,8 @@ img {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.home {
+  margin: 250px 0;
 }
