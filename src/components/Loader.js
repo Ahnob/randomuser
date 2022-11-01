@@ -1,3 +1,4 @@
+import React from 'react';
 const Loader = () => (
   <svg
     width="24"

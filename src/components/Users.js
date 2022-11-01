@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-
 import Loader from './Loader';
+import Profile from './Profile';
 
 export default function Users() {
   const [users, setUsers] = useState([]);
@@ -29,19 +29,7 @@ export default function Users() {
       <div>
         {users.slice(skip, skip + numberPerPage).map((user) => {
           const { name, location, email, login, picture } = user;
-          return (
-            <div className="each-user">
-              <div>
-                <img src={picture.large} />
-              </div>
-              <h1>
-                {name.first} {name.last}
-              </h1>
-              <h2>{email}</h2>
-              <h2>{location.country}</h2>
-              <h2>{login.uuid}</h2>
-            </div>
-          );
+          return <Profile name={"Anob"} age={32}/>;
         })}
       </div>
       {

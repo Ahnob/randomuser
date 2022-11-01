@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
-
-import About from './components/about';
+import About from './components/About';
 import Home from './components/Home';
 import Users from './components/Users';
+import Male from './components/Male'
 import PageNotFound from './components/PageNotFound';
-
 import './App.css';
 
 export class ErrorBoundary extends React.Component {
@@ -38,6 +37,12 @@ const Layout = () => {
       <NavLink to="/users" className="link">
         User
       </NavLink>
+      <NavLink to="/female" className="link">
+        Female
+      </NavLink>
+      <NavLink to="/male" className="link">
+        Male
+      </NavLink>
     </div>
   );
 };
@@ -62,11 +67,7 @@ export const Female = () => {
     );
   return (
     <div>
-      {femaleUsers.map((female) => (
-        <h2>
-          {female.name.title} {female.name.first} {female.name.last}
-        </h2>
-      ))}
+      <Female />
     </div>
   );
 };
